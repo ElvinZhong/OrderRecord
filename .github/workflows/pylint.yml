@@ -1,0 +1,15 @@
+import pandas as pd
+ 
+# 创建示例DataFrame
+df = pd.DataFrame({
+    'column': ['A', 'B', 'A', 'C', 'B', 'D', 'C', 'A', 'B']
+})
+ 
+# 使用value_counts()函数统计每个元素的出现次数
+counts = df['column'].value_counts()
+ 
+# 选出出现次数为2的元素
+double_values = counts[counts == 2].index
+ 
+# 输出结果
+print(double_values)
